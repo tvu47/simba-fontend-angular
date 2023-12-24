@@ -1,0 +1,31 @@
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+//** root
+:root {
+  background: $background;
+  color: $text;
+  font: 1rem "PT Sans", sans-serif;
+}
+
+.container {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container label {
+  display: table-cell;
+  text-align: left;
+  white-space: nowrap;
+  width: 150px;
+}
+#input_id {
+  display: table-cell;
+  width: 100%;
+}

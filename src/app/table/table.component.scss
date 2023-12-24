@@ -1,0 +1,31 @@
+#table_billiards {
+  border: 1px solid navy;
+  margin: 5px;
+  .sts_tbl {
+    font-size: medium;
+    font-weight: 600;
+  }
+  .inf {
+    margin-left: 10px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: row nowrap;
+  }
+  .act_icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+  }
+  .avt_tbl {
+    height: 100px;
+    width: 75px;
+    margin-bottom: 20px;
+  }
+  .tbl {
+    margin: 7px;
+  }
+  .tbl:hover {
+    background-color: #dbdbdb;
+  }
+}

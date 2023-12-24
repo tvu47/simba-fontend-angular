@@ -1,0 +1,221 @@
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form (ngSubmit)="signUp()" [formGroup]="regist">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <div
+              *ngIf="
+                regist.controls.fullName.invalid &&
+                (regist.controls.fullName.dirty ||
+                  regist.controls.fullName.touched)
+              "
+            >
+              <span
+                class="details log"
+                *ngIf="regist.controls.fullName.errors?.['required']"
+                >full name is required</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.fullName.errors?.['minlength']"
+                >password must be at least 5 characters long.</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.fullName.errors?.['maxlength']"
+                >password must be at max 41 characters long.</span
+              >
+            </div>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              formControlName="fullName"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Birthday</span>
+            <div
+              *ngIf="
+                regist.controls.birthday.invalid &&
+                (regist.controls.birthday.dirty ||
+                  regist.controls.birthday.touched)
+              "
+            >
+              <span
+                class="details log"
+                *ngIf="regist.controls.birthday.errors?.['required']"
+                >birthday is required</span
+              >
+            </div>
+            <input
+              type="date"
+              placeholder="Enter your birthday"
+              formControlName="birthday"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <div
+              *ngIf="
+                regist.controls.email.invalid &&
+                (regist.controls.email.dirty || regist.controls.email.touched)
+              "
+            >
+              <span
+                class="details log"
+                *ngIf="regist.controls.email.errors?.['required']"
+                >full name is required</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.email.errors?.['minlength']"
+                >password must be at least 5 characters long.</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.email.errors?.['maxlength']"
+                >password must be at max 32 characters long.</span
+              >
+            </div>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              formControlName="email"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <div
+              *ngIf="
+                regist.controls.phoneNumber.invalid &&
+                (regist.controls.phoneNumber.dirty ||
+                  regist.controls.phoneNumber.touched)
+              "
+            >
+              <span
+                class="details log"
+                *ngIf="regist.controls.phoneNumber.errors?.['required']"
+                >phone number is required</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.phoneNumber.errors?.['minlength']"
+                >phone number must be at least 8 number long.</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.phoneNumber.errors?.['maxlength']"
+                >phone number must be at max 12 number long.</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.phoneNumber.errors?.['pattern']"
+                >phone number must be number</span
+              >
+            </div>
+            <input
+              type="text"
+              placeholder="Enter your number"
+              formControlName="phoneNumber"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <div
+              *ngIf="
+                regist.controls.password.invalid &&
+                (regist.controls.password.dirty ||
+                  regist.controls.password.touched)
+              "
+            >
+              <span
+                class="details log"
+                *ngIf="regist.controls.password.errors?.['required']"
+                >password is required</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.password.errors?.['minlength']"
+                >password must be at least 5 characters long.</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.password.errors?.['maxlength']"
+                >password must be at max 32 characters long.</span
+              >
+            </div>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              formControlName="password"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <div
+              *ngIf="
+                regist.controls.coPassword.invalid &&
+                (regist.controls.coPassword.dirty ||
+                  regist.controls.coPassword.touched)
+              "
+            >
+              <span
+                class="details log"
+                *ngIf="regist.controls.coPassword.errors?.['required']"
+                >confirm password is required</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.coPassword.errors?.['minlength']"
+                >confirm password must be at least 5 characters long.</span
+              >
+              <span
+                class="details log"
+                *ngIf="regist.controls.coPassword.errors?.['maxlength']"
+                >confirm password must be at max 32 characters long.</span
+              >
+            </div>
+            <input
+              type="password"
+              placeholder="Confirm your password"
+              formControlName="coPassword"
+              required
+            />
+          </div>
+        </div>
+        <div class="gender-box">
+          <div><span class="details">Gender</span></div>
+          <input
+            type="radio"
+            name="gender"
+            class="gender"
+            value="F"
+            id="female"
+            formControlName="gender"
+          />
+          <label for="female">Female</label>
+          <input
+            type="radio"
+            name="gender"
+            class="gender"
+            value="M"
+            id="male"
+            formControlName="gender"
+          />
+          <label for="female">Male</label>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register" />
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

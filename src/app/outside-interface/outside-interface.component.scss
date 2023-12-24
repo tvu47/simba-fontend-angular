@@ -1,0 +1,36 @@
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    ul{
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+        justify-content: center;
+        li {
+            list-style: none;
+            flex-grow: 1;
+            text-align: center;
+            padding-top: 10px;
+        }
+        li:hover{
+            background-color: aqua;
+        }
+        #space{
+            flex-grow: 5;
+        }
+        img{
+            flex-grow: 1;
+            justify-content: center;
+        }
+    }
+}
+main{
+    #background{
+        width: 100%;
+        height: 200vh;
+    }
+}
+footer{
+    
+}

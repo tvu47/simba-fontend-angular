@@ -1,0 +1,78 @@
+<div class="form-bill-container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="bill">
+    <div class="head_inf">
+      <img
+        src="../../assets/image/logo-simba.png"
+        width="100"
+        height="50"
+        alt="logo-simba"
+      />
+    </div>
+    <hr />
+    <label for="name"><i class="fas fa-envelope"></i>Name</label>
+    <input
+      class="info_text"
+      type="text"
+      name="name"
+      id="name"
+      placeholder="name"
+      formControlName="name"
+    />
+    <label for="sdt"><i class="fas fa-envelope"></i>Phone number</label>
+    <input
+      class="info_text"
+      type="text"
+      name="sdt"
+      id="sdt"
+      placeholder="phone number"
+      formControlName="phoneNumber"
+    />
+
+    <h4>Discount<span>*</span></h4>
+    <select>
+      <option value=""></option>
+      <option value="1">Credit and Debit Cards</option>
+      <option value="2">Deposit</option>
+      <option value="3">Housing and Renovation Loan</option>
+      <option value="4">iBanking</option>
+      <option value="5">Treasures</option>
+    </select>
+    <hr />
+    <h4>started time: <span>*</span></h4>
+    <h4>total time: <span>*</span></h4>
+    <h4>play time funding total: <span>*</span></h4>
+    <hr />
+    <h4 style="border-bottom: 1px solid gray">
+      ==Services== <a href="#">Add New Service</a>
+    </h4>
+    <div>
+      <ul>
+        <li>
+          <span>name services</span> X <span>quantity</span>
+          <a href="#">edit</a> ||
+          <span style="color: blue" (click)="deleteService()">delete</span>
+        </li>
+        <li>
+          <span>name services</span> X <span>quantity</span>
+          <a href="#">edit</a> || <a href="#">delete</a>
+        </li>
+        <li>
+          <span>name services</span> X <span>quantity</span>
+          <a href="#">edit</a> || <a href="#">delete</a>
+        </li>
+      </ul>
+      <h4>Services funding total: <span>1350000</span></h4>
+    </div>
+    <hr />
+    <h4>discount: <span>- 150000</span></h4>
+    <hr />
+    <h4>Total: <span style="font-weight: bold"> 120000</span></h4>
+    <div class="btn-f">
+      <button class="btn-block" type="submit">Submit</button>
+      <button class="btn-cancel" type="button">Update</button>
+      <button class="btn-cancel" type="button" (click)="comeBack()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,8 @@
+@import "../components/home/home.component.scss";
+.processing_player {
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  color: red;
+  border: 5px solid green;
+}

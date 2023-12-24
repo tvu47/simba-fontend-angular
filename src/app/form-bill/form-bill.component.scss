@@ -1,0 +1,69 @@
+input {
+  width: calc(100% - 10px);
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+input:hover {
+  border: 1px solid #1c87c9;
+}
+div,
+form,
+input {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 22px;
+}
+form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 0 8px #006622;
+}
+.info_text {
+  padding: 10px;
+}
+.form-bill-container {
+  height: auto;
+  margin: 0;
+}
+.btn-f {
+  margin-top: 10px;
+  text-align: center;
+}
+.btn-add {
+  margin-top: 10px;
+  text-align: center;
+}
+.btn-block {
+  margin-top: 10px;
+  text-align: center;
+  background-color: #1ed106;
+}
+.btn-cancel {
+  margin-left: 10px;
+  text-align: center;
+  background-color: #ed1a1a;
+}
+button {
+  width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #669999;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  background: #484e4e;
+}
+.head_inf {
+  text-align: center;
+}

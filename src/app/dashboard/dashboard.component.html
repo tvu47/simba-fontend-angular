@@ -1,0 +1,17 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Dashboard</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div>
+      <img src="../../assets/image/pool-table.png" width="30" height="30" />
+      <span style="font-size: medium"> Active</span>
+    </div>
+    <div style="margin-top: 10px">
+      <img src="../../assets/image/pool-table (1).png" width="30" height="30" />
+      <span style="font-size: medium"> In-Active</span>
+    </div>
+    <hr />
+    <div class="processing_player">
+      <app-table *ngFor="let ite of dataList" [item]="ite"></app-table>
+    </div>
+  </div>
+</div>

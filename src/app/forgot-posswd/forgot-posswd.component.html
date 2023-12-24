@@ -1,0 +1,30 @@
+<form
+  style="justify-content: center; text-align: center; width: 100%; height: 50vh"
+  (ngSubmit)="submit()"
+  [formGroup]="solution"
+>
+  <div class="gender-box">
+    <div><span class="details">Choose one solution to get password</span></div>
+    <input
+      type="radio"
+      name="sol1"
+      class="sol"
+      value="p"
+      id="phone_number"
+      formControlName="solv"
+    />
+    <label for="female">Confirm via Phone Number</label>
+    <input
+      type="radio"
+      name="sol2"
+      class="sol"
+      value="e"
+      id="email"
+      formControlName="solv"
+    />
+    <label for="female">Confirm via email</label>
+  </div>
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+</form>

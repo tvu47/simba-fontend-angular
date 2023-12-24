@@ -1,0 +1,75 @@
+<div class="form_passwd_change">
+  <form [formGroup]="cpform" (ngSubmit)="submit()">
+    <div
+      *ngIf="cpform.controls.rePasswd.dirty || cpform.controls.rePasswdtouched"
+    >
+      <span class="details log" *ngIf="cpform.hasError('notSame')"
+        >Not Matchered</span
+      >
+    </div>
+    <div
+      *ngIf="
+        cpform.controls.passwd.invalid &&
+        (cpform.controls.passwd.dirty || cpform.controls.passwd.touched)
+      "
+    >
+      <span
+        class="details log"
+        *ngIf="cpform.controls.passwd.errors?.['required']"
+        >Password is required</span
+      >
+      <span
+        class="details log"
+        *ngIf="cpform.controls.passwd.errors?.['minlength']"
+        >Password must be at least 8 number long.</span
+      >
+      <span
+        class="details log"
+        *ngIf="cpform.controls.passwd.errors?.['maxlength']"
+        >Password must not missing</span
+      >
+    </div>
+    <div
+      *ngIf="
+        cpform.controls.rePasswd.invalid &&
+        (cpform.controls.rePasswd.dirty || cpform.controls.rePasswd.touched)
+      "
+    >
+      <span
+        class="details log"
+        *ngIf="cpform.controls.rePasswd.errors?.['required']"
+        >Confirm Password is required</span
+      >
+      <span
+        class="details log"
+        *ngIf="cpform.controls.rePasswd.errors?.['minlength']"
+        >Confirm Password must be at least 8 number long.</span
+      >
+      <span
+        class="details log"
+        *ngIf="cpform.controls.rePasswd.errors?.['maxlength']"
+        >Confirm Password must be at max 64 number long.</span
+      >
+    </div>
+    <label for="passwd"> New Password </label>
+    <input
+      type="password"
+      name="passwd"
+      id="passwd"
+      placeholder="Enter New Password"
+      formControlName="passwd"
+    />
+    <label for="repasswd"> Confirm New Password </label>
+    <input
+      type="password"
+      placeholder="Confirm password"
+      matInput
+      name="repasswd"
+      id="repasswd"
+      [errorStateMatcher]="matcher"
+      formControlName="rePasswd"
+    />
+    <button type="submit" style="margin: 10px">OK</button>
+    <button type="button" style="margin: 10px">Cancel</button>
+  </form>
+</div>

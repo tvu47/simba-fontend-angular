@@ -1,0 +1,35 @@
+<div id="table_billiards">
+  <div class="tbl" (click)="changeStatus()">
+    <div class="container">
+      <img
+        class="avt_tbl"
+        [hidden]="_statusDefault"
+        src="../../assets/image/pool-table (1).png"
+      />
+      <img
+        class="avt_tbl"
+        [hidden]="!_statusDefault"
+        src="../../assets/image/pool-table.png"
+      />
+      <div class="info_tbl">
+        <img
+          class="act_icon"
+          [hidden]="_statusDefault"
+          src="../../assets/image/icons8-inactive-48 (1).png"
+        />
+        <img
+          class="act_icon"
+          [hidden]="!_statusDefault"
+          src="../../assets/image/icons8-inactive-48.png"
+        />
+        <span class="inf sts_tbl">{{
+          _statusDefault ? "active" : "inactive"
+        }}</span>
+        <div class="inf"><span class="sts_tbl"> start : ???</span></div>
+        <div class="inf"><span class="sts_tbl"> during : ???</span></div>
+        <div class="inf"><span class="sts_tbl"> : ???</span></div>
+      </div>
+    </div>
+    <span>{{ item.tableName }}</span>
+  </div>
+</div>
